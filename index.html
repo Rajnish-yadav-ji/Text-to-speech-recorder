@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech Recorder</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #speak{
+      background: goldenrod;
+
+    }
+    #speak:hover{
+      border: 2px solid blueviolet;
+      scale: 1.1;
+    }
+    #record:hover{
+  border: 1px solid red;
+  opacity: 1;
+  scale: 1.1;
+}
+#stop{
+  color: white;
+  background: red;
+}
+#stop:hover{
+  border: 2px solid black;
+  scale: 1.1;
+}
+
+p{
+  line-height: 40px;
+  
+}
+  </style>
+</head>
+<body >
+  <div class="container">
+    <h1 class="text-center my-4" style="color: blue;">Text to Speech <span style="font-size: 50px;font-weight: 900;color: red; text-decoration: underline;">Recorder</span></h1>
+    <div class="form-group">
+      <textarea id="text" class="form-control" rows="5" placeholder="Enter text here..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="voices">Select Voice:</label>
+      <select id="voices" class="form-control"></select>
+    </div>
+    <div class="text-center my-2">
+      <button id="speak" class="btn btn-primary mx-1">Speak🔊</button>
+      <button id="record" class="btn btn-success mx-1">Record🔴</button>
+      <button id="stop" class="btn btn-secondary mx-1" disabled  >Stop⏹</button>
+      <div id="timer" class="my-2"></div>
+    </div>
+    <div id="recordings" class="my-4"></div>
+  </div>
+  <div style="margin: 15px; margin-top: 10px;">
+    <div class="empty" style="height: 10px; width: 100%; background: black;">
+      <p></p>
+    </div>
+    <div class="instruction">
+      <h1 style="text-align: center; border: 2px solid yellow;background: pink; margin-top: 10px;;">Instructions</h1> <br>
+        <p>1.Enter Text: Type the text you want to convert to speech in the text area. <br>
+        2.Select Voice: Choose a voice from the dropdown menu. <br>
+        3.Speak: Click the "Speak🔊" button to hear the text spoken. <br>
+        4.Record: Click the "Record🔴" button to start recording both the spoken text and any audio input. <br>
+        5.Stop: Click the "Stop⏹" button to stop the recording. <br>
+        6.Download/Delete: Use the "Download⬇️" button to save the recording or "Delete❌" to remove it. <br></p>
+    </div>
+    <div style="background-color: blueviolet;color: white;">
+      <p style="background-color:red;text-align: center;">Made By Rajnish Yadav ❤️</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
